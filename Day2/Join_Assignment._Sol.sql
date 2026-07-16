@@ -584,12 +584,13 @@ INNER JOIN Employees as M ON E.ManagerID = M.EmployeeID
 WHERE E.ManagerID IN (SELECT ManagerID FROM Employees GROUP BY ManagerID HAVING COUNT(*) > 1)
 
 -- 7. Find departments with no managers.
-SELECT DepartmentName 
-FROM Departments as D 
-WHERE D.DepartmentID NOT IN (SELECT DepartmentID FROM Employees WHERE EmployeeID IN (SELECT ManagerID FROM Employees WHERE ManagerID IS NOT NULL))
+SELECT DepartmentName
+FROM Departments as D
+LEFT JOIN Employees as E ON D.DepartmentID = E.DepartmentID AND E.EmployeeID IN (SELECT ManagerID FROM Employees)
+WHERE E.EmployeeID IS NULL
 
 -- 8. Find managers with more than three employees.
-SELECT M.EmployeeName, COUNT(E.EmployeeID) AS EmployeeCount 
+SELECT M.EmployeeName AS ManagerName, COUNT(E.EmployeeID) AS EmployeeCount 
 FROM Employees as E 
 INNER JOIN Employees as M ON E.ManagerID = M.EmployeeID 
 GROUP BY M.EmployeeID, M.EmployeeName 
