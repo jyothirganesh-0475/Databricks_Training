@@ -1,4 +1,5 @@
 Below is the code for creating a table and insert the data into the table
+
 CREATE TABLE Employees (
     emp_id INT,
     emp_name VARCHAR(50),
@@ -26,6 +27,8 @@ INSERT INTO Employees VALUES
 (115, 'Manoj', 'Finance', 58000, 'Mumbai', 4);
 
 Below are the questions for practicing sql for you. Complete it
+
+
 Questions
 *SELECT*
 Display all employee details.
