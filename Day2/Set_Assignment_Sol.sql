@@ -458,3 +458,13 @@ SELECT * FROM FormerEmployees
 SELECT Department FROM CurrentEmployees 
 INTERSECT 
 SELECT Department FROM FormerEmployees
+
+-- 4. Find customer names appearing in both customer tables.
+SELECT CustomerName FROM DomesticCustomers 
+INTERSECT 
+SELECT CustomerName FROM InternationalCustomers
+
+-- 5. Find common salaries between current and former employees.
+SELECT Salary FROM CurrentEmployees 
+INTERSECT 
+SELECT Salary FROM FormerEmployees
