@@ -1,0 +1,9 @@
+emp_id,name,age,department,salary,city,joining_date,manager_id
+101,Alice,25,HR,45000,Chennai,15-01-2022,201
+102,Bob,30,IT,70000,Bangalore,20-06-2021,202
+103,Charlie,null,IT,null,Chennai,12-03-2023,202
+104,David,28,Finance,65000,Mumbai,18-09-2020,203
+105,Eva,35,HR,80000,null,25-05-2019,201
+106,Frank,29,Marketing,55000,Hyderabad,null,204
+107,Grace,31,Finance,null,Pune,01-12-2022,203
+108,Henry,26,IT,60000,Bangalore,10-01-2024,null
